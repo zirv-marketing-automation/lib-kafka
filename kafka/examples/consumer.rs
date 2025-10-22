@@ -20,7 +20,7 @@ use serde::{Deserialize, Serialize};
 use std::time::Duration;
 use tokio::signal;
 use tracing::{info, Level};
-use tracing_subscriber;
+use tracing_subscriber::FmtSubscriber;
 
 /// Example message type for user creation events
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -81,7 +81,7 @@ async fn handle_order_placed(msg: OrderPlaced) -> anyhow::Result<()> {
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     // Initialize tracing
-    tracing_subscriber::fmt()
+    FmtSubscriber::builder()
         .with_max_level(Level::INFO)
         .init();
 
