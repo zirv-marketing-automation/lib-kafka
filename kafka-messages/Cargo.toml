@@ -1,0 +1,10 @@
+[package]
+name = "kafka-messages"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Message trait definitions for type-safe Kafka messages"
+
+[dependencies]
+serde = { workspace = true }

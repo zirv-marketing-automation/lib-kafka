@@ -1,0 +1,21 @@
+[package]
+name = "kafka"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Type-safe Kafka producer and consumer with Tokio and rdkafka"
+
+[dependencies]
+kafka-messages = { path = "../kafka-messages" }
+tokio = { workspace = true }
+rdkafka = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tracing-subscriber = { workspace = true }
+tokio-test = "0.4"
