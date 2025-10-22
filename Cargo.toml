@@ -1,3 +1,11 @@
+# Workspace configuration for lib-kafka
+#
+# This workspace contains two crates:
+# - kafka-messages: Core trait definitions for message types
+# - kafka: Producer and Consumer implementations
+#
+# To use this library, add both crates as dependencies in your project.
+
 [workspace]
 members = ["kafka-messages", "kafka"]
 resolver = "2"
